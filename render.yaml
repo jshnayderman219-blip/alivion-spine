@@ -3,6 +3,7 @@ services:
     name: alivion-lead-flow
     env: node
     plan: free
+    rootDir: lead-flow
     buildCommand: npm install
     startCommand: node index.js
     envVars:
