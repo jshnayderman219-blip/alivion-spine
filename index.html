@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alivion Spine – Expert chiropractic care in Cutler Bay, FL. Back pain, neck pain, sciatica, and more. Same-day appointments available.">
+  <title>Chiropractor Cutler Bay FL | Alivion Spine – Expert Pain Relief</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== RESET & VARIABLES ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-primary: #0d6b6e;
+      --color-primary-dark: #094f51;
+      --color-primary-light: #e0f4f4;
+      --color-accent: #c88c3a;
+      --color-accent-dark: #a6722e;
+      --color-bg: #fafaf8;
+      --color-white: #ffffff;
+      --color-off-white: #f5f4f0;
+      --color-surface: #ffffff;
+      --color-text: #1a1a1a;
+      --color-text-muted: #5c5c5c;
+      --color-text-light: #888888;
+      --color-border: #e8e6e1;
+      --color-border-light: #f0eee9;
+      --color-success: #2d8a4e;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --max-width: 1200px;
+      --nav-height: 80px;
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== TOP BAR ===== */
+    .top-bar {
+      background: var(--color-primary-dark);
+      color: white;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .top-bar a:hover { opacity: 0.85; }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border-light);
+      height: var(--nav-height);
+    }
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--color-text-muted);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--color-primary); }
+    .nav-cta {
+      background: var(--color-accent);
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 600 !important;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover {
+      background: var(--color-accent-dark) !important;
+      transform: translateY(-1px);
+    }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-text);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #0a1830;
+      background-image: url('images/miami-hero-2.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.72) 0%,
+        rgba(255,255,255,0.55) 40%,
+        rgba(255,255,255,0.82) 100%
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: white;
+      color: var(--color-primary);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--color-text);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--color-primary);
+    }
+    .hero-subtitle {
+      font-size: 18px;
+      color: var(--color-text-muted);
+      margin-bottom: 40px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      letter-spacing: -0.01em;
+    }
+    .btn-primary {
+      background: var(--color-accent);
+      color: white;
+      box-shadow: 0 2px 8px rgba(200,140,58,0.3);
+    }
+    .btn-primary:hover {
+      background: var(--color-accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(200,140,58,0.35);
+    }
+    .btn-secondary {
+      background: white;
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+    }
+    .btn-secondary:hover {
+      background: var(--color-primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ===== SECTION COMMON ===== */
+    .section {
+      padding: 100px 32px;
+    }
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--color-text-muted);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .section-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    /* ===== CONDITIONS ===== */
+    .conditions {
+      background: var(--color-white);
+    }
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .condition-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      transition: all 0.25s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .condition-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary-light);
+      background: white;
+    }
+    .condition-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--color-primary-light);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .condition-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .condition-card p {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .condition-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ===== TRUST BAR ===== */
+    .trust-bar {
+      background: #dceeff;
+      border-top: 1px solid rgba(13,107,110,0.14);
+      border-bottom: 1px solid rgba(13,107,110,0.14);
+      padding: 32px 0;
+    }
+    .trust-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 24px;
+      text-align: center;
+    }
+    .trust-item strong {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--color-primary-dark);
+    }
+    .trust-item span {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ===== ABOUT / SPLIT SECTIONS ===== */
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-split.reverse {
+      direction: rtl;
+    }
+    .about-split.reverse > * {
+      direction: ltr;
+    }
+    .about-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+    .about-text .section-label {
+      margin-bottom: 12px;
+    }
+    .about-text .section-title {
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      font-size: 16px;
+      color: var(--color-text-muted);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    /* ===== WHY US ===== */
+    .why-us {
+      position: relative;
+      background: var(--color-off-white);
+      background-image: url('images/miami-hero.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-attachment: fixed;
+    }
+    .why-us::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(248, 247, 244, 0.85);
+      z-index: 1;
+    }
+    .why-us .section-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .why-us-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .why-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-light);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .why-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary-light);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .why-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    .why-card p {
+      font-size: 15px;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials {
+      background: var(--color-white);
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+    .stars {
+      color: var(--color-accent);
+      font-size: 16px;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .testimonial-card blockquote {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--color-text);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+    .testimonial-author span {
+      display: block;
+      font-weight: 400;
+      color: var(--color-text-light);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 100px 32px;
+      color: var(--color-text);
+      background-color: #0a1830;
+      background-image: url('images/miami-hero-2.jpg');
+      background-size: cover;
+      background-position: center 70%;
+    }
+    .cta-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.80) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .cta-section .section-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .cta-section .section-title {
+      color: var(--color-text);
+    }
+    .cta-section .section-subtitle {
+      color: var(--color-text-muted);
+      margin: 0 auto 40px;
+    }
+    .cta-section .btn-primary {
+      background: var(--color-accent);
+      color: white;
+      box-shadow: 0 4px 16px rgba(200,140,58,0.3);
+    }
+    .cta-section .btn-primary:hover {
+      background: var(--color-accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(200,140,58,0.35);
+    }
+    .cta-section .btn-secondary {
+      border-color: rgba(0,0,0,0.3);
+      color: var(--color-text);
+    }
+    .cta-section .btn-secondary:hover {
+      background: rgba(13,107,110,0.08);
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    /* ===== SERVICE AREA ===== */
+    .service-area {
+      background: var(--color-off-white);
+    }
+    .service-area-inner {
+      text-align: center;
+    }
+    .area-badge {
+      display: inline-block;
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: 30px;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      margin: 8px;
+      transition: all 0.2s;
+    }
+    .area-badge:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    /* ===== LEAD CAPTURE ===== */
+    .lead-capture {
+      background: var(--color-primary);
+      color: white;
+    }
+    .lead-capture .section-label { color: rgba(255,255,255,0.7); }
+    .lead-capture .section-title { color: white; }
+    .lead-capture .section-subtitle { color: rgba(255,255,255,0.8); }
+
+    .lead-form {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .lead-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .lead-input { display: flex; flex-direction: column; gap: 6px; }
+    .lead-input.full { margin-bottom: 16px; }
+    .lead-input label {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.02em;
+    }
+    .lead-input input,
+    .lead-input textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.1);
+      color: white;
+      font-family: var(--font-sans);
+      font-size: 15px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .lead-input input::placeholder,
+    .lead-input textarea::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+    .lead-input input:focus,
+    .lead-input textarea:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      background: rgba(255,255,255,0.15);
+    }
+    .lead-submit-btn {
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+      background: var(--color-accent) !important;
+      color: white !important;
+      border: none;
+      cursor: pointer;
+    }
+    .lead-submit-btn:hover {
+      background: var(--color-accent-dark) !important;
+    }
+    .lead-submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .lead-disclaimer {
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 12px;
+    }
+    .lead-success {
+      text-align: center;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 32px 0;
+    }
+    .success-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .lead-success h3 { font-family: var(--font-display); font-size: 24px; margin-bottom: 8px; }
+    .lead-success p { color: rgba(255,255,255,0.8); }
+
+    @media (max-width: 768px) {
+      .lead-form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--color-text);
+      color: rgba(255,255,255,0.7);
+      padding: 80px 32px 40px;
+    }
+    .footer-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer h4 {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 20px;
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .footer p, .footer li {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .footer ul {
+      list-style: none;
+    }
+    .footer a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer a:hover { color: white; }
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 48px auto 0;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+    .social-links {
+      display: flex;
+      gap: 16px;
+    }
+    .social-links a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .social-links a:hover {
+      background: rgba(255,255,255,0.15);
+      color: white;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      :root { --nav-height: 68px; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: white;
+        padding: 24px 32px;
+        gap: 16px;
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: var(--shadow-md);
+      }
+      .nav-links.active { display: flex; }
+      .nav-toggle { display: block; }
+      .nav-cta { text-align: center; width: 100%; }
+
+      .hero { padding: 72px 24px 80px; }
+      .hero h1 { font-size: 34px; }
+
+      .section { padding: 64px 24px; }
+      .section-title { font-size: 28px; }
+
+      .conditions-grid { grid-template-columns: 1fr 1fr; }
+      .why-us-grid, .testimonials-grid { grid-template-columns: 1fr; }
+      .about-split, .about-split.reverse { grid-template-columns: 1fr; gap: 32px; }
+      .about-split.reverse { direction: ltr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .conditions-grid { grid-template-columns: 1fr; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 300px; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    📞 Call Now: <a href="tel:+14487773679">(448) 777-3679</a> &nbsp;|&nbsp; Same-Day Appointments Available
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><img src="images/logo.png" alt="Alivion Spine" height="44"></a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#book" class="nav-cta">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <span class="hero-badge">⭐ Trusted in Cutler Bay</span>
+        <h1>Reclaim Your Life.<br><em>Pain-Free.</em></h1>
+        <p class="hero-subtitle">
+          Expert chiropractic care in Cutler Bay, FL. We treat back pain, neck pain, sciatica,
+          auto injuries, and more with personalized, drug-free solutions. Same-day appointments available.
+        </p>
+        <div class="hero-buttons">
+          <a href="#book" class="btn btn-primary">Book Your Appointment →</a>
+          <a href="tel:+14487773679" class="btn btn-secondary">📞 (448) 777-3679</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+      <div class="trust-inner">
+        <div class="trust-item"><strong>500+</strong><span>5-Star Reviews</span></div>
+        <div class="trust-item"><strong>15+</strong><span>Years in Cutler Bay</span></div>
+        <div class="trust-item"><strong>Same-Day</strong><span>Appointments</span></div>
+        <div class="trust-item"><strong>All Major</strong><span>Insurance Accepted</span></div>
+      </div>
+    </div>
+
+    <!-- Intro / About -->
+    <section class="section about-intro">
+      <div class="section-inner">
+        <div class="about-split">
+          <div class="about-image">
+            <img src="images/chiro-treatment.jpg" alt="Chiropractic treatment at Alivion Spine" loading="lazy">
+          </div>
+          <div class="about-text">
+            <div class="section-label">Our Philosophy</div>
+            <h2 class="section-title">Restoring Your Natural Alignment</h2>
+            <p>At Alivion Spine LLC, we believe that true health is found in balance. Our chiropractic practice is dedicated to providing effective relief for chronic pain through natural, non-invasive care.</p>
+            <p>We empower our patients with tailored, long-term wellness solutions, allowing you to return to the active, vibrant life you deserve.</p>
+            <a href="#book" class="btn btn-primary" style="margin-top: 16px;">Book Your Consultation →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conditions We Treat -->
+    <section class="section conditions" id="services">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-label">Conditions We Treat</div>
+          <h2 class="section-title">Chiropractic Services in Cutler Bay</h2>
+          <p class="section-subtitle">
+            From chronic back pain to sports injuries, our experienced team provides targeted,
+            effective treatment for a wide range of conditions.
+          </p>
+        </div>
+        <div class="conditions-grid">
+          <a href="#" class="condition-card">
+            <div class="condition-icon">🦴</div>
+            <h3>Back Pain</h3>
+            <p>Targeted spinal adjustments to relieve chronic and acute back pain at its source.</p>
+            <span class="condition-link">Learn More →</span>
+          </a>
+          <a href="#" class="condition-card">
+            <div class="condition-icon">💆</div>
+            <h3>Neck Pain</h3>
+            <p>Gentle cervical adjustments to restore mobility and reduce neck tension.</p>
+            <span class="condition-link">Learn More →</span>
+          </a>
+          <a href="#" class="condition-card">
+            <div class="condition-icon">⚡</div>
+            <h3>Sciatica</h3>
+            <p>Relieve radiating leg pain with decompression and targeted adjustments.</p>
+            <span class="condition-link">Learn More →</span>
+          </a>
+          <a href="#" class="condition-card">
+            <div class="condition-icon">🚗</div>
+            <h3>Auto Injury / Whiplash</h3>
+            <p>Recover from car accidents with specialized whiplash and soft tissue care.</p>
+            <span class="condition-link">Learn More →</span>
+          </a>
+          <a href="#" class="condition-card">
+            <div class="condition-icon">🧠</div>
+            <h3>Headaches</h3>
+            <p>Address tension and cervicogenic headaches through spinal alignment.</p>
+            <span class="condition-link">Learn More →</span>
+          </a>
+          <a href="#" class="condition-card">
+            <div class="condition-icon">🏃</div>
+            <h3>Sports Injuries</h3>
+            <p>Get back in the game faster with performance-focused rehabilitation.</p>
+            <span class="condition-link">Learn More →</span>
+          </a>
+          <a href="#" class="condition-card">
+            <div class="condition-icon">🤰</div>
+            <h3>Prenatal Chiropractic</h3>
+            <p>Safe, gentle care for expecting mothers to ease pregnancy-related discomfort.</p>
+            <span class="condition-link">Learn More →</span>
+          </a>
+          <a href="#" class="condition-card">
+            <div class="condition-icon">✨</div>
+            <h3>Chiropractic Adjustments</h3>
+            <p>Precision spinal adjustments to optimize nervous system function and overall wellness.</p>
+            <span class="condition-link">Learn More →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section why-us" id="about">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-label">Why Choose Us</div>
+          <h2 class="section-title">Why Cutler Bay Chooses Alivion</h2>
+          <p class="section-subtitle">
+            We're not just another chiropractic office — we're your partners in long-term
+            health and mobility.
+          </p>
+        </div>
+        <div class="why-us-grid">
+          <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3>Personalized Treatment</h3>
+            <p>Every patient receives a custom care plan tailored to their specific condition, lifestyle, and goals — no cookie-cutter approaches.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🏠</div>
+            <h3>Local Experts</h3>
+            <p>Proudly serving Cutler Bay and South Miami-Dade. We understand the needs of our community and treat every patient like family.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">⚡</div>
+            <h3>Same-Day Availability</h3>
+            <p>Pain doesn't wait — neither should you. We offer same-day appointments so you can get relief when you need it most.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">📋</div>
+            <h3>Insurance Accepted</h3>
+            <p>We work with most major insurance plans, including auto injury and workers' compensation. We'll handle the paperwork.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">⭐</div>
+            <h3>5-Star Reputation</h3>
+            <p>Consistently rated among the top chiropractors in Cutler Bay. Our patients' results speak for themselves.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">🌿</div>
+            <h3>Drug-Free Relief</h3>
+            <p>We focus on natural, non-invasive treatments that address the root cause of your pain — not just mask the symptoms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wellness Journey -->
+    <section class="section wellness-journey">
+      <div class="section-inner">
+        <div class="about-split reverse">
+          <div class="about-text">
+            <div class="section-label">Wellness Journey</div>
+            <h2 class="section-title">Empowering Long-Term Wellness</h2>
+            <p>We don't just treat symptoms — we empower you with a long-term wellness strategy that actually works. Our holistic approach combines precise adjustments with lifestyle guidance to keep you active and thriving.</p>
+            <p>From chronic pain management to active wellness plans, every patient receives a roadmap to lasting health.</p>
+            <a href="#book" class="btn btn-primary" style="margin-top: 16px;">Start Your Journey →</a>
+          </div>
+          <div class="about-image">
+            <img src="images/chiro-wellness.jpg" alt="Wellness and chiropractic care at Alivion Spine" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" id="reviews">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-label">Testimonials</div>
+          <h2 class="section-title">What Our Patients Say</h2>
+          <p class="section-subtitle">
+            Real stories from real patients who found relief at Alivion Spine.
+          </p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>
+              "After years of lower back pain, Dr. Alivion gave me my life back. I can play with my kids again without fear. Truly life-changing care."
+            </blockquote>
+            <div class="testimonial-author">
+              Maria G.
+              <span>Cutler Bay, FL</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>
+              "I was in a car accident and thought I'd never feel normal again. The team at Alivion Spine was so compassionate and effective. I'm pain-free now."
+            </blockquote>
+            <div class="testimonial-author">
+              James R.
+              <span>Palmetto Bay, FL</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>
+              "Same-day appointment was a lifesaver when my sciatica flared up. Professional, clean office, and genuinely caring staff. Highly recommend!"
+            </blockquote>
+            <div class="testimonial-author">
+              Lisa T.
+              <span>Cutler Bay, FL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="book">
+      <div class="cta-overlay"></div>
+      <div class="section-inner">
+        <h2 class="section-title">Ready to Feel Extraordinary?</h2>
+        <p class="section-subtitle">
+          Don't let pain hold you back another day. Book your appointment now and take
+          the first step toward a healthier, pain-free life.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Book Appointment Online →</a>
+          <a href="tel:+14487773679" class="btn btn-secondary">📞 Call (448) 777-3679</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="section service-area">
+      <div class="section-inner service-area-inner">
+        <div class="section-label">Service Area</div>
+        <h2 class="section-title">Serving All of South Miami-Dade</h2>
+        <p class="section-subtitle" style="margin: 0 auto 32px;">
+          Conveniently located in Cutler Bay, proudly serving the surrounding communities.
+        </p>
+        <div>
+          <span class="area-badge">Cutler Bay</span>
+          <span class="area-badge">Palmetto Bay</span>
+          <span class="area-badge">Pinecrest</span>
+          <span class="area-badge">Kendall</span>
+          <span class="area-badge">Homestead</span>
+          <span class="area-badge">South Miami</span>
+          <span class="area-badge">Coral Gables</span>
+          <span class="area-badge">Florida City</span>
+        </div>
+      </div>
+    </section>
+    <!-- Lead Capture -->
+    <section class="section lead-capture" id="lead-form">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-label">Get Started</div>
+          <h2 class="section-title">Ready to Live Pain-Free?</h2>
+          <p class="section-subtitle">
+            Fill out the form below and our team will reach out within 24 hours to schedule your consultation.
+          </p>
+        </div>
+        <form class="lead-form" id="leadForm">
+          <div class="lead-form-row">
+            <div class="lead-input">
+              <label for="leadName">Full Name *</label>
+              <input type="text" id="leadName" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="lead-input">
+              <label for="leadPhone">Phone *</label>
+              <input type="tel" id="leadPhone" name="phone" placeholder="(305) 555-0123" required>
+            </div>
+            <div class="lead-input">
+              <label for="leadEmail">Email</label>
+              <input type="email" id="leadEmail" name="email" placeholder="you@email.com">
+            </div>
+          </div>
+          <div class="lead-input full">
+            <label for="leadMessage">What's bothering you?</label>
+            <textarea id="leadMessage" name="message" rows="4" placeholder="e.g., Lower back pain for 3 months, sciatica, neck stiffness..."></textarea>
+          </div>
+          <input type="hidden" name="source" value="alivion-website">
+          <button type="submit" class="btn btn-primary lead-submit-btn">Request Consultation →</button>
+          <p class="lead-disclaimer">No spam. We'll reach out within 24 hours to discuss your needs.</p>
+        </form>
+        <div class="lead-success" id="leadSuccess" style="display:none;">
+          <div class="success-icon">✓</div>
+          <h3>Thank You!</h3>
+          <p>We've received your request. Our team will reach out within 24 hours.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="images/logo.png" alt="Alivion Spine" style="height: 40px; width: auto; filter: brightness(0) invert(1);"></div>
+        <p>Cutler Bay's trusted chiropractic practice. Expert, compassionate care for South Miami-Dade families.</p>
+        <div class="social-links" style="margin-top: 16px;">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Back Pain</a></li>
+          <li><a href="#">Neck Pain</a></li>
+          <li><a href="#">Sciatica</a></li>
+          <li><a href="#">Auto Injury / Whiplash</a></li>
+          <li><a href="#">Headaches</a></li>
+          <li><a href="#">Sports Injuries</a></li>
+          <li><a href="#">Prenatal Chiropractic</a></li>
+          <li><a href="#">Adjustments</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📍 Cutler Bay, FL</li>
+          <li><a href="tel:+14487773679">📞 (448) 777-3679</a></li>
+          <li><a href="mailto:Alivionspinellc@gmail.com">✉️ Alivionspinellc@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon – Fri: 8:00am – 6:00pm</li>
+          <li>Saturday: 9:00am – 1:00pm</li>
+          <li>Sunday: Closed</li>
+          <li style="margin-top: 12px;"><a href="#book">📅 Book Online</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Alivion Spine. All rights reserved.</span>
+      <span>Cutler Bay, FL — South Miami-Dade</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav close on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+
+    // ---- Lead Form Handler ----
+    // Configure this URL when your backend is deployed:
+    const LEAD_API_URL = 'https://YOUR_RENDER_APP.onrender.com/api/leads';
+
+    // Fallback: if the backend isn't ready, leads are saved to localStorage
+    const FALLBACK_KEY = 'alivion_leads';
+
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.lead-submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      const data = {
+        name: document.getElementById('leadName').value.trim(),
+        phone: document.getElementById('leadPhone').value.trim(),
+        email: document.getElementById('leadEmail').value.trim(),
+        message: document.getElementById('leadMessage').value.trim(),
+        source: 'alivion-website'
+      };
+
+      try {
+        // Try the Render backend first
+        const resp = await fetch(LEAD_API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (resp.ok) {
+          showSuccess();
+          return;
+        }
+      } catch (e) {
+        // Backend not reachable — fall through to fallback
+        console.log('Lead API not reachable, using fallback:', e.message);
+      }
+
+      // Fallback: save locally
+      const leads = JSON.parse(localStorage.getItem(FALLBACK_KEY) || '[]');
+      leads.push({ ...data, captured_at: new Date().toISOString() });
+      localStorage.setItem(FALLBACK_KEY, JSON.stringify(leads));
+      console.log('Lead saved locally (total:', leads.length + ')');
+      showSuccess();
+    });
+
+    function showSuccess() {
+      document.getElementById('leadForm').style.display = 'none';
+      document.getElementById('leadSuccess').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
