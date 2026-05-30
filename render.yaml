@@ -13,16 +13,7 @@ services:
         fromDatabase:
           name: alivion-leads-db
           property: connectionString
-      - key: REDIS_URL
-        fromService:
-          name: alivion-leads-redis
-          type: redis
-          property: connectionString
 
 databases:
   - name: alivion-leads-db
     plan: free
-
-  - name: alivion-leads-redis
-    plan: free
-    ipAllowList: []
