@@ -118,4 +118,18 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+// Landing page
+app.get('/', (req, res) => {
+  res.send(`<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Leadflow API</title>
+<style>body{font-family:system-ui;max-width:600px;margin:80px auto;padding:20px;background:#0d1117;color:#c9d1d9}h1{color:#58a6ff}code{background:#161b22;padding:2px 8px;border-radius:4px;font-size:14px}a{color:#58a6ff}</style></head>
+<body>
+<h1>✓ Leadflow API</h1>
+<p><strong>Status:</strong> Running</p>
+<p>POST leads to <code>/api/leads</code> — GET them at <code>/api/leads</code></p>
+<p><a href="/api/health">/api/health</a> · <a href="/api/leads">/api/leads</a></p>
+</body></html>`);
+});
+
 app.listen(PORT, () => console.log(`Lead flow API running on port ${PORT}`));
